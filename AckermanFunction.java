@@ -15,7 +15,6 @@ public class AckermanFunction {
 			//Example
 			System.out.println(new AckermanFunction().A(3,8));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

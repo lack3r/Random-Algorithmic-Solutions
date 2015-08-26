@@ -31,7 +31,7 @@ class ReverseWords {
 		String[] wordList=str.split(" "); //Create a table containing all the words
 		String returnString=""; //The string that will be returned
 		for (int i=wordList.length-1;i>1;i--){ //Start from the end of the string array
-			returnString+=wordList[i]; //And add word by word at the returnString
+			returnString+=wordList[i]; //And add word by word to the returnString
 			returnString+=" ";
 		}
 		//Last Word

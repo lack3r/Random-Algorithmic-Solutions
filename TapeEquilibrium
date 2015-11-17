@@ -1,0 +1,29 @@
+//Misses a couple of cases, will fix by the end of day
+
+class TapeEquilibrium {
+    public int sum(int[] A){
+        int sum=0;
+        for (int i=0;i<A.length;i++){
+            sum+=A[i];
+            }
+            return sum;
+        }
+    public int solution(int[] A) {
+        // write your code in Java SE 8
+        int leftSum = 0;
+        int rightSum = sum(A);
+        int P=0;
+        int minSum = Integer.MAX_VALUE;
+        
+        for (int i=0;i<A.length;i++){
+            leftSum+=A[i];
+            rightSum-=A[i];
+             int difference = Math.abs(leftSum-rightSum);
+             if (difference<minSum){
+                 minSum = difference;
+                 P=i;
+              }
+            }
+            return minSum;
+    }
+}

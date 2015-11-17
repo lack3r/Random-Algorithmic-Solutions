@@ -1,5 +1,3 @@
-//Misses a couple of cases, will fix by the end of day
-
 class TapeEquilibrium {
     public int sum(int[] A){
         int sum=0;
@@ -15,7 +13,7 @@ class TapeEquilibrium {
         int P=0;
         int minSum = Integer.MAX_VALUE;
         
-        for (int i=0;i<A.length;i++){
+        for (int i=0;i<A.length-1;i++){
             leftSum+=A[i];
             rightSum-=A[i];
              int difference = Math.abs(leftSum-rightSum);
@@ -26,4 +24,3 @@ class TapeEquilibrium {
             }
             return minSum;
     }
-}

@@ -1,0 +1,18 @@
+import java.util.HashSet;
+class Solution {
+    public int solution(int X, int[] A) {
+    HashSet<Integer> set = new HashSet<Integer>();
+    int expectedSum = X*(X+1)/2;
+        for (int i=0;i<A.length;i++){
+            if(A[i]<=X) {
+              if(!set.contains(A[i])){
+                set.add(A[i]);
+                expectedSum-=A[i];
+              }
+                
+            if(expectedSum==0){return i;}
+            }
+        }
+        return -1;
+    }
+}

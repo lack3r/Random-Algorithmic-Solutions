@@ -9,3 +9,6 @@
         return result;
         
     }
+
+
+HelloWorld.insertions(0b10000000000,0b10011,2,6);

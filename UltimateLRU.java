@@ -146,11 +146,6 @@ public class DoubleLinkedList {
 		last = node;
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
 
 
@@ -171,11 +166,6 @@ public class DoubleLinkedListNode {
 		this.previous = null;
 		this.next = null;
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
 
 

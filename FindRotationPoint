@@ -1,0 +1,49 @@
+//https://www.interviewcake.com/question/java/find-rotation-point
+public class FindRotationPoint {
+
+	static public String findRotationPointBinSearch(String[] words){
+		if (words==null||words.length==0){return null;}
+		
+		int from = 0;
+		int to = words.length-1;
+		//Array is sorted. return the fist word
+		if (words[from].compareTo(words[to])<0){return words[from];}
+
+		while(to>=from){
+			int mid = (from+to)/2;
+			//if mid is the rotation point
+			
+			//if we came down to one word, return that word
+			if (from==to||mid+1>=words.length){return words[mid];}
+			//if mid is larger than the next word, then the next word is the rotation point
+			if (words[mid].compareTo(words[mid+1])>0){
+				return words[mid+1];
+			}
+			//if not take left half
+			if (words[from].compareTo(words[mid])>0){
+				to=mid;
+			}else{
+				//take right half
+				from=mid+1;
+			}
+		}
+		return null;
+	}
+	public static void main(String[] args) {
+		String[] words = new String[]{
+			    "othellolagkage",
+			    "ptolemaic",
+			    "retrograde",
+			    "supplant",
+			    "undulate",
+			    "xenoepist",
+				"asymptote", // <-- rotates here!
+				"babka",
+			    "banoffee",
+			    "engender",
+			    "karpatka",
+		};
+		System.out.println(findRotationPointBinSearch(words));
+	}
+
+}

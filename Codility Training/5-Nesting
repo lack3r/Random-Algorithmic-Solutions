@@ -1,0 +1,20 @@
+class Solution {
+    public int solution(String S) {
+        int leftParenthesis=0;
+        for (int i=0;i<S.length();i++){
+            char x  = S.charAt(i);
+            if (x=='('){
+                leftParenthesis++;
+            } else if (x==')'){
+                leftParenthesis--;
+                if (leftParenthesis<0){
+                    return 0;
+                }
+            }
+        }
+        if (leftParenthesis==0){
+            return 1;
+        }
+        return 0;
+    }
+}
